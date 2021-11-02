@@ -1,0 +1,186 @@
+/*Second section*/
+
+.second{
+    background-color: #b5c9b9;
+    height:100vh;
+    padding:3rem;
+
+    
+}
+
+.containersecond {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr; 
+    margin:15px;
+    padding:20px;
+    justify-items:center;
+    grid-gap:1.5rem;
+   
+}
+
+
+.fade-in-image  {
+    animation: fadeIn 4s;
+    -webkit-animation: fadeIn 4s;
+    -moz-animation: fadeIn 4s;
+    -o-animation: fadeIn 4s;
+    -ms-animation: fadeIn 4s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  .fade-in-imagetwo{
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    30%{opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    30%{opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    30%{opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  .fade-in-imagethree{
+    animation: fadeIn 6s;
+    -webkit-animation: fadeIn 6s;
+    -moz-animation: fadeIn 6s;
+    -o-animation: fadeIn 6s;
+    -ms-animation: fadeIn 6s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    80% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    80% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  @-webkit-keyframes fadeIn {
+        0% {opacity:0;}
+        80% {opacity:0;}
+        100% {opacity:1;}
+      }
+
+ .fade-in-imagefour{
+        animation: fadeIn 7s;
+        -webkit-animation: fadeIn 7s;
+        -moz-animation: fadeIn 7s;
+        -o-animation: fadeIn 7s;
+        -ms-animation: fadeIn 7s;
+      }
+      @keyframes fadeIn {
+        0% {opacity:0;}
+        90% {opacity:0;}
+        100% {opacity:1;}
+      }
+      
+      @-moz-keyframes fadeIn {
+        0% {opacity:0;}
+        90% {opacity:0;}
+        100% {opacity:1;}
+      }
+    
+      @-webkit-keyframes fadeIn {
+            0% {opacity:0;}
+            90% {opacity:0;}
+            100% {opacity:1;}
+          }
+
+.cardone {
+    
+    grid-column: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /*border-radius: 10px;*/
+    transition: 0.3s;
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    background-color: #fff;
+    margin:10px;
+    padding:5px;
+
+
+    }
+  
+
+  .cardtwo {
+    
+    grid-column: 2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    background-color: #fff;
+    margin:10px;
+    padding:5px;
+  }
+
+  .cardthree {
+    
+    grid-column: 3;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /*border-radius: 10px;*/
+    transition: 0.3s;
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    background-color: #fff;
+    margin:10px;
+    padding:5px;
+  }
+
+  .cardfour {
+    
+    grid-column: 4;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    background-color: #fff;
+    margin:10px;
+    padding:5px;
+  }
+
+  .cardone:hover, 
+  .cardtwo:hover,  
+  .cardthree:hover,  
+  .cardfour:hover {
+    box-shadow: 5px 12px 20px 0 rgba(0, 0, 0, 0.5);
+  }
+ 
+  button {
+    border: none;
+    cursor: pointer;
+  }

@@ -1,0 +1,39 @@
+nav {
+    background-color: #a3ccac;
+    width: 100%;
+    
+   
+     /*border-top-left-radius:10px ;
+    border-top-right-radius:10px ;
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+    
+
+
+.navbar {
+    display: grid;
+    grid-template-columns:70% 30%;
+    padding:20px;
+   
+}
+
+.navbar ul li{
+    display: inline-block;
+    list-style: none;
+    padding:10px;
+    
+    
+    /*padding-top: 5px;*/
+    
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #000;
+    justify-content: right;
+    font-family:'Abel', 'Poppins';
+    font-weight: 500;
+    font-size: 1.2em;
+    
+}
+
+}
