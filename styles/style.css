@@ -94,23 +94,23 @@ nav .navbar ul li a {
   display: grid;
   grid-template-columns: 15rem repeat(4, 1fr);
   grid-row: repeat 3, 1fr;
-  margin: 20px;
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
 }
 .first .textbox {
-  grid-column: 4/6;
+  grid-column: 1/5;
   grid-row: 1;
-  padding: 10px;
-  margin-left: 1rem;
-  width: 400px;
-  height: 80px;
   z-index: 10;
+  padding: 10px;
+  /*width:400px;
+   height:80px;
+  */
   /*background-color: #a3ccac;*/
 }
 .first .firstleft {
-  grid-column: 4/6;
+  grid-column: 1/3;
   grid-row: 1/2;
-  margin-left: -2rem;
+  margin-right: -2rem;
   z-index: 3;
   align-self: end;
 }
@@ -119,20 +119,13 @@ nav .navbar ul li a {
   bottom: 0;
   /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
 }
-.first .firstleft .frame {
-  width: 440px;
-  height: 265px;
-  border: 1px solid #000;
-  background: #fff;
-  margin: auto;
-  padding: 15px 10px;
-}
 .first .firstright {
   position: relative;
   overflow: hidden;
-  grid-column: 1/4;
+  grid-column: 3/6;
   grid-row: 1;
   z-index: 2;
+  justify-items: start;
 }
 .first .firstright img {
   width: 100%;
@@ -168,11 +161,11 @@ nav .navbar ul li a {
 }
 
 .fade-in-image {
-  animation: fadeIn 3s;
-  -webkit-animation: fadeIn 3s;
-  -moz-animation: fadeIn 3s;
-  -o-animation: fadeIn 3s;
-  -ms-animation: fadeIn 3s;
+  animation: fadeIn 4s;
+  -webkit-animation: fadeIn 4s;
+  -moz-animation: fadeIn 4s;
+  -o-animation: fadeIn 4s;
+  -ms-animation: fadeIn 4s;
 }
 
 @keyframes fadeIn {
@@ -252,7 +245,7 @@ nav .navbar ul li a {
   0% {
     opacity: 0;
   }
-  60% {
+  80% {
     opacity: 0;
   }
   100% {
@@ -263,7 +256,7 @@ nav .navbar ul li a {
   0% {
     opacity: 0;
   }
-  60% {
+  80% {
     opacity: 0;
   }
   100% {
@@ -274,7 +267,7 @@ nav .navbar ul li a {
   0% {
     opacity: 0;
   }
-  60% {
+  80% {
     opacity: 0;
   }
   100% {
@@ -282,11 +275,11 @@ nav .navbar ul li a {
   }
 }
 .fade-in-imagefour {
-  animation: fadeIn 8s;
-  -webkit-animation: fadeIn 8s;
-  -moz-animation: fadeIn 8s;
-  -o-animation: fadeIn 8s;
-  -ms-animation: fadeIn 8s;
+  animation: fadeIn 7s;
+  -webkit-animation: fadeIn 7s;
+  -moz-animation: fadeIn 7s;
+  -o-animation: fadeIn 7s;
+  -ms-animation: fadeIn 7s;
 }
 
 @keyframes fadeIn {
