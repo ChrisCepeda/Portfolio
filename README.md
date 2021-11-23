@@ -22,3 +22,67 @@ border-box
       margin: auto;
       padding: 15px 10px;
     }
+
+
+      
+   /*.firstright{
+
+    position: relative;
+    grid-column: 2 / 4; 
+    
+    
+   
+
+
+     img{
+       
+        position: absolute;
+        width: 100%;
+        top:3px;
+        z-index: 1;
+        
+      
+     }
+     .mask{
+       position:absolute;
+       grid-column: 1 / 4; 
+       z-index: 2;
+       width:120%;
+       top:0;
+       right:0;
+      
+       
+       right:0;
+       user-select:none;
+       mix-blend-mode:screen;
+     } 
+     
+    }
+
+     @keyframes zoom {
+        0% { transform:scale(1,1); }
+        50% { transform:scale(1.2,1.2); }
+        100% {transform:scale(1,1);}
+      }
+}
+*/
+
+
+    .firstleft{
+        grid-column: 1 / 2;
+        margin-right: -2rem;
+        z-index:10;
+      
+      
+          
+        img{
+            width: 100%;
+            bottom:0;
+            
+           
+            /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+            
+        }
+        
+       
+    }

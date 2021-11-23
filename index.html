@@ -31,96 +31,111 @@
 
       </nav>
       
-      <div class="scroll-container">
+   
      
       <section class="first">
-
-     <div class="container">
-     
-     
-
-       <div class="firstleft">
-       
-        
-           
-         </div>
+    
+        <div class="container">
+          <div class="logo">
+            <img src="images/Logo.svg"  alt="logo"> <br>
+            </div>
          
-         <div class="textbox">
-          <img src="images/Logo.svg" alt="logo"> <br>
-         </div>
 
-     <div class="firstright">
-     
-      <div class="frame">
-       
-     
-      <img src="images/technology-gf3ba34c95_1920.jpg"/>
+          
+            <div class="item1">
+          <div class="card">
+            <div class="content">
+              <h2>01</h2>
+              <h3>Web development</h3>
+              <p>Frontend Developer <br> student</p>
+            </div>
+            </div>
+          </div>
 
-     </div>
-    </div>
+          <div class="item2">
+          <div class="card">
+            <div class="content">
+              <h2>02</h2>
+              <h3>Design</h3>
+              <p>Creations and Innovations </p>
+            </div>
+            </div>
+          </div>
 
-     
-     
-    </div>
+          <div class="item3">
+          <div class="card">
+            <div class="content">
+              <h2>03</h2>
+              <h3>Blog</h3>
+              <p>The stories of my life</p>
+             
+            </div>
+          </div>
+        </div>
 
         </div>
       </section>
 
+
+
+
+
       <section class="second">
 
-        <h1>ABOUT ME</h1>
+        <img src="images/Aboutme.svg" alt="about" style="width:20%"/>
 
         <div class="containersecond">
+      
 
-          <div class="fade-in-image">
+          <div class="fadeAndScale">
           <div class="cardone">
             <button id="Btnone">
-              <img src="images/me.jpg"  alt="Christina Cepeda" style="width:100%"/></button>
-            <div class="container">
+              <img src="images/chris.jpg"  alt="Christina Cepeda" style="width:100%"/></button>
+           
               <h2>CHRISTINA CEPEDA</h2>
                 <p>Hi there & welcome to my site <br>   
                 </p>
-            </div>
+           
           </div>
         </div>
          
-        <div class="fade-in-imagetwo">
+        <div class="fadeAndScale2">
           <div class="cardtwo">
             <button id="Btntwo">
             <img src="images/webcard.jpg" alt="FrontendDeveloper" style="width:100%"/></button>
-            <div class="container">
+            
                 <h2>WEB DEVELOPMENT</h2>
                 <p>Frontend Developer student <br>   
                 </p>
-            </div>
+            
           </div>
         </div>
           
-        <div class="fade-in-imagethree">
+        <div class="fadeAndScale3">
           <div class="cardthree">
             <button id="Btnthree">
             <img src="images/textile.jpg" alt="creator" style="width:100%"/></button>
-            <div class="container">
+            
                 <h2>CREATOR</h2>
                 <p>Textile & Jewellery<br>   
                 </p>
-            </div>
+         
           </div>
         </div>
        
-        <div class="fade-in-imagefour">
+        <div class="fadeAndScale4">
           <div class="cardfour">
             <button id="Btnfour">
             <img src="images/educator.jpg" alt="teacher" style="width:100%"/></button>
-            <div class="container">
+           
                 <h2>EDUCATOR</h2>
                 <p>Pedagogy & Didactics <br>   
                 </p>
-            </div>
+           
           </div>
         </div>
         
-       
+      
         </div>
 
          <!-- The Modal -->
@@ -218,6 +233,14 @@
 
       </section>
     </div>
+   
+    <script type="text/javascript" src="./vanilla-tilt.js"></script>
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelectorAll(".card"), {
+		max: 25,
+		speed: 400
+	});</script>
+
       <script src="./scripts/script.js"></script>
       
 </body>
