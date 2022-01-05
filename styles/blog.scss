@@ -1,12 +1,11 @@
-/*Second section*/
+.blog{
+    background-color: #f0f7f1;
+    padding:20px;
+    margin-bottom: 3rem;
 
-.second{
-    background-color: #b5c9b9;
-    padding:3rem;
-
-    
 }
 
+/*Cards */
 .containersecond {
     display: grid;
     grid-template-columns:1fr 1fr 1fr 1fr; 
@@ -107,9 +106,4 @@
   .cardthree:hover,  
   .cardfour:hover {
     box-shadow: 5px 12px 20px 0 rgba(0, 0, 0, 0.5);
-  }
- 
-  button {
-    border: none;
-    cursor: pointer;
   }
