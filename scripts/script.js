@@ -59,17 +59,4 @@ span.forEach((span) => {
   };
 
 
-  //Animation on scroll
-  var sections = document.querySelectorAll('sectiontwo');
-  var container = document.querySelector('.scroll__container');
-  container.addEventListener('scroll', function () {
-  sections.forEach((e, i) => {
-  var top = (e.getBoundingClientRect().top);
-  if (top == 0) {
-  e.classList.add('is-inview')
-  } else {
-  e.classList.remove('is-inview')
-  }
-  });
-  })
-  container.dispatchEvent(newCustomEvent('scroll'));
+ 
