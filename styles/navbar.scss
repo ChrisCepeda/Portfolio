@@ -36,11 +36,14 @@ nav {
     font-family:'Abel', 'Poppins';
     font-weight: 500;
     font-size: 1.7em;
+    display: inline-block;
     
 }
 .navbar ul li a:hover {
-     text-decoration: 1.5px underline overline;
-   
-}
+    text-decoration: 1px underline;
+     transition: transform  0.4s ease-out;
+     transform: scale(1.2);
+     transform-origin: top;
 
+}
 }

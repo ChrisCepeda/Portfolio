@@ -23,7 +23,13 @@ let weather = {
 
     }
 };
-weather.fetchWeather("Cancún");
+weather.fetchWeather("Åre");
+
+//Time
+
+const str = new Date().toLocaleString('en-US', { timeZone: 'Europe/Stockholm',hour: '2-digit', minute:'2-digit'});
+console.log(str);
+document.getElementById("time").innerHTML = str;
 
 //Gallery
 var slideIndex = 1;

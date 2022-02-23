@@ -86,3 +86,29 @@ border-box
         
        
     }
+
+           Once upon a time I use to travel, alot! I had the 
+              privilige to meet and mix with different cultures and traditions.
+              This inspired me to collaborate with local tailors designing clothes 
+              in India and Bali. Do read my blog for more information and to see beautiful pics 
+              of places and design. <br> 
+            
+              
+              <button class="button1">Read more</button>
+
+               <div class="weathercardtime">
+        
+             <h5>Time</h5>
+        
+        <div class="grid">
+            
+            <div class="sunrise">
+            <img src="../images/sunrise.png" style="width: 40%">
+            <h6>06:55</h6> </div>
+        
+            <div class="sunset">   
+            <img src="../images/sunset.png" style="width: 40%">
+            <h6>06:55</h6></div>
+       
+        </div>
+    </div>
