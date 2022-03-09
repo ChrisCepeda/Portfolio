@@ -16,7 +16,7 @@
    
 }
 
-@keyframes fadeAndScale {
+@keyframes fadeScale {
   0% {
     opacity:0;
     transform:scale3d(.75,.75,1);
@@ -47,7 +47,7 @@
     padding:5px;
     z-index:3;
 
-    animation:fadeAndScale 3s cubic-bezier(0.39, -1.05, 0.58, 1.95);
+    animation:fadeScale 3s cubic-bezier(0.39, -1.05, 0.58, 1.95);
     transform-origin:center bottom;
 
     }
@@ -65,7 +65,7 @@
     margin:10px;
     padding:5px;
 
-    animation:fadeAndScale 4s cubic-bezier(0.39, -1.05, 0.58, 1.95);
+    animation:fadeScale 4s cubic-bezier(0.39, -1.05, 0.58, 1.95);
     transform-origin:center bottom;
   }
 
@@ -82,7 +82,7 @@
     margin:10px;
     padding:5px;
 
-    animation:fadeAndScale 5s cubic-bezier(0.39, -1.05, 0.58, 1.95);
+    animation:fadeScale 5s cubic-bezier(0.39, -1.05, 0.58, 1.95);
     transform-origin:center bottom;
   }
 
@@ -106,6 +106,7 @@
   .blogcardthree:hover,  
   .blogcardfour:hover {
     box-shadow: 5px 12px 20px 0 rgba(0, 0, 0, 0.5);
+  
   }
 
   //Blog page

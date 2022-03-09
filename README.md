@@ -112,3 +112,19 @@ border-box
        
         </div>
     </div>
+
+     A quick summary: I have roamed around the world, from Tokyo to Rio. I started a small 
+              business making my own clothes collection working with local tailors from India 
+              and Indonesia. 
+              And I worked as a teacher for approximately a decade. 
+              This amazing experience have led to great knowledge and skills in collaborations, design and group dynamics.
+             <br><br>
+
+               <div class="contactcontainer">
+                      <a href="mailto:hello@cepeda.se"><img src="../images/mail_icon.png" class="icon"alt="mailme"style="width:60%"/></a>  
+                      <a target="_blank" href="http://linkedin.com/in/christina-cepeda-313099228"> <img src="../images/linkedin.png" class="icon" style="width:60%"/></a>
+                      <a target="_blank" href="https://www.instagram.com/christina.cepeda/"> <img src="../images/insta.png" class="icon" style="width:60%"/></a>
+                      <a target="_blank" href="https://github.com/ChrisCepeda"><img src="../images/githubicon.png"class="icon" style="width:60%"/></a>
+                
+      
+                    </div>
