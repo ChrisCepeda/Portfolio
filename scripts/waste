@@ -1,67 +1,4 @@
-const timeEl = document.getElementById('time');
-const dateEl = document.getElementById('date');
-const currentWeatherItemsEl = document.getElementById('current-weater-items');
 
-const timezone = document.getElementById('time-zone');
-const weatherForecastEl = document.getElementById('weather-forecast');
-const currentTempEl = document.getElementById('current-temp');
-
-//why? so this function will be called every one second.
-
-//we create an array of days and month
-const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-
-
-
-setInterval(() => {
-const time = new Date ();
-const month = time.getMonth();
-const date = time.getDate();
-const day = time.getDay();
-const hour = time.getHours();
-const hoursIn12HrFormat = hour >=13 ? hour %12: hour
-const minutes = time.getMinutes();
-const ampm = hour >=12 ? 'PM' : 'AM'
-
-timeEl.innerHTML = hoursIn12HrFormat + ':' + minutes+ '' + `<span id="am-pm">${ampm}</span>`
-
-dateEl.innerHTML = days[day] + ', ' + date+ ' ' + month[month]
-
-
-}, 1000);
-
-//to call the data create function
-
-let weather = {
-    "apiKey":"7025c693a8b25e37ff1ce82e9efbd331",
-    fetchWeather: function (){
-        fetch("https://api.openweathermap.org/data/2.5/onecall?lat=21.236695&lon=-86.735768&exclude=hourly,minutely&units=metric&appid=7025c693a8b25e37ff1ce82e9efbd331"
-        ).then((response) => response.json())
-        .then((data) => console.log(data));
-
-        showWeatherdata (data);
-
-        },
-    }
-
-    function showWeatherdata (data){
-
-        data.daily.forEach((day, idx)=>{
-         if(idx == 0){
-             currentTempEl.innerHTML = `
-             <div class="today" id="current-temp">
-             <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather-icon" class="icon">
-             <div class="day">${window.Comment(day.dt*1000).format('ddd')} </div> 
-             <div class="temp">Night  ${day.temp.night}&#176; C</div>
-             <div class="temp">Day   ${day.temp.day}&#176; C</div>
-         </div>`
-         }
-
-        
-        }
-    
     
    
       
@@ -99,6 +36,139 @@ subscribe_button.addEventListener('click', function(){
     subscribe_button.classList.remove("subscribe_button_active");
   }, 4000);
 });
+
+
+
+.container_subscribe {  
+
+}
+
+.subscribe_bar {
+  width: 300px;
+  height: 50px;
+  background: white;
+  border-radius: 10px;
+  top: 50%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-align: left;
+
+}
+
+.login {
+  background: transparent;
+  font-family: 'Poppins' , sans-serif;
+  font-size: small;
+  height: 100%;
+  width: 300px;
+  border-radius: 10px;
+  border:none;
+  padding-left: 5px;
+  line-height: 50px;
+  vertical-align: left;
+  z-index: 10;
+  -webkit-transition: transform 0.2s ease-in-out 0s;
+     -moz-transition: transform 0.2s ease-in-out 0s;
+       -o-transition: transform 0.2s ease-in-out 0s;
+          transition: transform 0.2s ease-in-out 0s;
+}
+
+.login_active {
+   
+  -webkit-transform: translateX(300px);
+     -moz-transform: translateX(300px);
+      -ms-transform: translateX(300px);
+       -o-transform: translateX(300px);
+          transform: translateX(300px);
+}
+
+.subscribe_button:hover{
+  background-color: #222A33;
+  cursor:pointer;
+}
+
+.subscribe_button {
+  background: #171D23;
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  font-size: small;
+  top: -50px;
+  left: 200px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 150px;
+  width: 100px;
+  text-align: center;
+  line-height: 150px;
+  vertical-align: middle; 
+  color: white;
+  -webkit-transition: transform 0.5s ease 0s;
+     -moz-transition: transform 0.5s ease 0s;
+       -o-transition: transform 0.5s ease 0s;
+          transition: transform 0.5s ease 0s;
+}
+
+.subscribe_button_active{
+  -webkit-transform: translateY(50px);
+     -moz-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+       -o-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.subscribing{
+  border:none;
+  background:#ebbdc9;
+  height: 100%;
+  width: 300px;
+  z-index: 5;
+  position: absolute;
+  left:-300px;
+  display: inline-block;
+  text-align: left;
+  -webkit-transition: transform 1s ease 0s ;
+     -moz-transition: transform 1s ease 0s ;
+       -o-transition: transform 1s ease 0s ;
+          transition: transform 1s ease 0s ;
+}
+
+.subscribing_active {
+  -webkit-transform: translateX(300px);
+     -moz-transform: translateX(300px);
+      -ms-transform: translateX(300px);
+       -o-transform: translateX(300px);
+          transform: translateX(300px);
+}
+
+.thanks{
+  background: transparent;
+  height: 100%;
+  width: 200px;
+  right: 35%;
+  z-index: 5;
+  text-align: right;
+  line-height: 50px;
+  vertical-align: middle;
+  font-family: 'Poppins', sans-serif;
+  font-size: small;
+ 
+  position: absolute;
+  top:50px;
+  display: inline-block;
+  -webkit-transition: transform 0.5s ease 0s ;
+     -moz-transition: transform 0.5s ease 0s ;
+       -o-transition: transform 0.5s ease 0s ;
+          transition: transform 0.5s ease 0s ;
+}
+
+.thanks_active {
+  -webkit-transform: translateY(-50px);
+     -moz-transform: translateY(-50px);
+      -ms-transform: translateY(-50px);
+       -o-transform: translateY(-50px);
+          transform: translateY(-50px);
+}
 
 
 <script type="module">
@@ -145,3 +215,4 @@ const firebaseConfig = {
     document.getElementById('submitBtn').addEventListener('click', InsertData);
  
 </script> 
+            <div class="btn-1">Thank you!</div>

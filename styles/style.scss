@@ -213,11 +213,16 @@ p {
   grid-template-columns:1fr 1fr;
   justify-items:center;
   align-items: center;
+  padding-top: 50px;
+  padding-right:15px;
+
  
 
   .textbox{
    
-    text-align: center;
+    
+    padding-right:15px;
+    font-weight: bold;
   }
 
 
@@ -227,8 +232,8 @@ p {
   font-family: 'Abel' , sans-serif;
   border: none;
   color: white;
-  padding: 10px;
-  text-align: center;
+  padding: 8px;
+  text-align: right;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
@@ -243,7 +248,7 @@ p {
   color: #000;
   font-weight: 700;
   transition: transform  0.4s ease-out ;
-  transform: scale(1.5);
+  transform: scale(1.2);
   transform-origin: center;
 }
 
@@ -374,7 +379,7 @@ button {
 }
 
 
-
+//footer section
 .footer{
   background-color: #a3ccac;
   color: #000;
@@ -420,7 +425,7 @@ button {
 }
 
 .contactcontainer{
-  
+  margin: auto;
   margin-top: 20px;
   background-color:#a3ccac; 
   border-radius: 5px;
@@ -444,3 +449,4 @@ button {
 .contactcontainer:hover{
   background-color:#f5F1ea;
 }
+
