@@ -7,23 +7,23 @@
 
 ## :card_index_dividers: Project Setup 
  **:zap: Research on how to build a portfolio. <br>
- :zap: Share and store code with GIT and GitHub. <br>
+ :zap: Share and store code with GIT and GitHub.** <br>
 
 
 ## :computer:	 Technologies & Tools
- **:zap: HTML <br>
+ **:zap: HTML5 <br>
  :zap: CSS <br>
- :zap:JavaScript<br>
- :zap:Weather API <br>
-  :zap:Firebase <br>
+ :zap: JavaScript<br>
+ :zap: Weather API <br>
+ :zap: Firebase <br>
  :zap: GIT and GitHub**<br>
 
   
 ## :mechanical_arm: Skills developed
- **:zap: Store, structure and retrive data in the document database MongoDB.   <br> 
-  :zap: Building a dynamic single page application with React, connect the Components to data on my backend server and render them as HTML. <br>
-  :zap: Learn the Node.js functions and its runtime enviroment for quickly creating network applications. <br>
- :zap: Understanding the functions of Express.js, the web framework for Node.js, which builds the backend of a site using Node.js functions and structures. It helps to easily handle HTTP requests and responses.**<br>        
+ **:zap: Understanding the page structure of HTML5 and the style control of CSS.<br> 
+  :zap: Controlling the behaviour of different elements with JavaScript.  <br>
+  :zap: Structure and hierchy of a website for search engines to crawl, index and understand content. <br>
+ :zap: The importance of a responsive website.**<br>        
 
             
  ## :dancing_women: Team 
