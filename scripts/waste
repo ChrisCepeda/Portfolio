@@ -1,0 +1,102 @@
+const timeEl = document.getElementById('time');
+const dateEl = document.getElementById('date');
+const currentWeatherItemsEl = document.getElementById('current-weater-items');
+
+const timezone = document.getElementById('time-zone');
+const weatherForecastEl = document.getElementById('weather-forecast');
+const currentTempEl = document.getElementById('current-temp');
+
+//why? so this function will be called every one second.
+
+//we create an array of days and month
+const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+
+
+
+setInterval(() => {
+const time = new Date ();
+const month = time.getMonth();
+const date = time.getDate();
+const day = time.getDay();
+const hour = time.getHours();
+const hoursIn12HrFormat = hour >=13 ? hour %12: hour
+const minutes = time.getMinutes();
+const ampm = hour >=12 ? 'PM' : 'AM'
+
+timeEl.innerHTML = hoursIn12HrFormat + ':' + minutes+ '' + `<span id="am-pm">${ampm}</span>`
+
+dateEl.innerHTML = days[day] + ', ' + date+ ' ' + month[month]
+
+
+}, 1000);
+
+//to call the data create function
+
+let weather = {
+    "apiKey":"7025c693a8b25e37ff1ce82e9efbd331",
+    fetchWeather: function (){
+        fetch("https://api.openweathermap.org/data/2.5/onecall?lat=21.236695&lon=-86.735768&exclude=hourly,minutely&units=metric&appid=7025c693a8b25e37ff1ce82e9efbd331"
+        ).then((response) => response.json())
+        .then((data) => console.log(data));
+
+        showWeatherdata (data);
+
+        },
+    }
+
+    function showWeatherdata (data){
+
+        data.daily.forEach((day, idx)=>{
+         if(idx == 0){
+             currentTempEl.innerHTML = `
+             <div class="today" id="current-temp">
+             <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather-icon" class="icon">
+             <div class="day">${window.Comment(day.dt*1000).format('ddd')} </div> 
+             <div class="temp">Night  ${day.temp.night}&#176; C</div>
+             <div class="temp">Day   ${day.temp.day}&#176; C</div>
+         </div>`
+         }
+
+        
+        }
+    
+    
+   
+      
+
+<div class="container_subscribe">
+          <div id="subscribe" class="subscribe_bar">
+            <span type="submit" class="subscribe_button" onclick="subscribeOnClick()">subscribe</span>
+            <span class="subscribing"></span>
+            <span class="thanks"> Thank you!</span>
+          </div>
+        </div>
+
+          //subscribe function
+
+var subscribe_button = document.querySelector(".subscribe_button");
+
+subscribe_button.addEventListener('click', function(){
+  var subscribing = document.querySelector(".subscribing");
+  var thanks = document.querySelector(".thanks");
+  var login = document.querySelector(".login");
+
+  subscribing.classList.add("subscribing_active");
+  subscribe_button.classList.add("subscribe_button_active");
+  setTimeout(function(){
+    login.classList.add("login_active");
+  }, 1200);
+  setTimeout(function(){
+    thanks.classList.add("thanks_active");
+  }, 1400);
+
+  setTimeout(function(){
+    thanks.classList.remove("thanks_active");
+    login.classList.remove("login_active");
+    subscribing.classList.remove("subscribing_active");
+    subscribe_button.classList.remove("subscribe_button_active");
+  }, 4000);
+});
+
