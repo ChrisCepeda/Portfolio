@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 /* Modal Content */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 .modal-content {
   position: relative;
   margin: 40px auto;
@@ -31,7 +32,7 @@
 }
 
 .email:hover {
-  color: #b61e76;
+  color: rgb(182, 30, 118);
 }
 
 .modal {
@@ -80,12 +81,6 @@
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
-}
-
-.blog {
-  background-color: #f0f7f1;
-  padding: 20px;
-  margin-bottom: 3rem;
 }
 
 /*Cards */
@@ -179,9 +174,8 @@
 }
 
 .blog {
-  background-color: #f0f7f1;
-  padding: 20px;
-  margin-bottom: 3rem;
+  background-color: #fff;
+  padding: 3rem;
 }
 
 .post {
@@ -326,39 +320,115 @@
 nav {
   background-color: #a3ccac;
   width: 100%;
-  /*border-top-left-radius:10px ;
-  border-top-right-radius:10px ;
-  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
 }
 nav .navbar {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 30% 70%;
   padding: 20px;
 }
-nav .navbar ul li {
+
+.title {
+  padding: 10px;
+}
+
+.nav-links {
+  list-style-type: none;
+  text-align: right;
+}
+
+.nav-links ul li {
   display: inline-block;
-  list-style: none;
-  padding: 10px;
-  /*padding-top: 5px;*/
-}
-nav .title {
   padding: 10px;
 }
-nav .navbar ul li a {
+
+.nav-links li a {
   text-decoration: none;
   color: #000;
-  justify-content: right;
   font-family: "Abel", "Poppins";
-  font-size: 1.7em;
-  display: inline-block;
+  font-size: 1.8em;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
 }
-nav .navbar ul li a:hover {
-  text-decoration: 1px underline;
+
+.nav-links ul li:hover {
   transition: transform 0.3s ease-out;
   transform: scale(1.2);
   transform-origin: center;
 }
 
+@media only screen and (max-width: 420px) {
+  .nav-links {
+    position: fixed;
+    height: 100%;
+    max-width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #a3ccac;
+    justify-content: space-evenly;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    /* padding-top: 3vh; */
+    z-index: 98;
+    text-align: center;
+  }
+
+  .nav-links li {
+    opacity: 0;
+    margin-top: 10vh;
+    width: 50%;
+  }
+
+  .nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Abel", "Poppins";
+    cursor: pointer;
+  }
+
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  .burger {
+    justify-self: end;
+    margin-top: 20px;
+    display: block;
+    z-index: 99;
+    cursor: pointer;
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
 .wrapper {
   display: grid;
   grid-template-columns: 60% 40%;
@@ -397,9 +467,6 @@ nav .navbar ul li a:hover {
 
 .submit:hover {
   background: #a3ccac;
-  transition: transform 0.4s ease-out;
-  transform: scale(1.1);
-  transform-origin: center;
 }
 
 .about {
@@ -416,7 +483,7 @@ nav .navbar ul li a:hover {
 
 .alinks:hover {
   text-decoration: underline;
-  color: #9c3565;
+  color: rgb(156, 53, 101);
 }
 
 .containerabout {
@@ -489,13 +556,14 @@ nav .navbar ul li a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: end;
+  grid-gap: 20px;
 }
 
 .projectcard {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 200px;
-  height: 300px;
+  height: 310px;
   text-align: center;
   background-color: #fff;
   margin: 10px;
@@ -530,6 +598,175 @@ nav .navbar ul li a:hover {
   transform-origin: center bottom;
 }
 
+.fadebyScale5 {
+  animation: fadeAndScale 6s cubic-bezier(0.39, -1.05, 0.58, 1.95);
+  transform-origin: center bottom;
+}
+
+.fadebyScale6 {
+  animation: fadeAndScale 7s cubic-bezier(0.39, -1.05, 0.58, 1.95);
+  transform-origin: center bottom;
+}
+
+.post {
+  background-color: #fff;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.gridcontainer {
+  display: grid;
+  grid-template-columns: 2fr 7fr;
+  grid-template-rows: auto auto auto;
+  grid-gap: 1rem;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.weathercard {
+  /*border-radius: 5px;  */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: #a3ccac;
+  align-content: center;
+  padding: 10px;
+  grid-column-start: 1;
+}
+
+.weathercardtime {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+  background: #a3ccac;
+  align-content: center;
+  padding: 10px;
+  grid-column-start: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  padding: 5px;
+}
+
+.description {
+  text-transform: capitalize;
+}
+
+/*Gallery*/
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -541,6 +778,12 @@ body {
   width: 1100px;
   margin-top: 5vh;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+@media only screen and (max-width: 640px) {
+  body {
+    max-width: 100%;
+    margin-top: 0;
+  }
 }
 
 h1 {
@@ -592,21 +835,35 @@ p {
   /* Center the image */
   background-repeat: no-repeat;
   /* Do not repeat the image */
-  background-size: 85%;
+  background-size: 90%;
   /*Resize the background image to cover the entire container */
+}
+@media only screen and (max-width: 768px) {
+  .first {
+    background-size: 100%;
+    background-position: center;
+  }
 }
 
 .container {
   padding: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-items: end;
+}
+@media only screen and (max-width: 640px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
 }
 
 .logocard {
-  width: 500px;
-  height: 350px;
+  max-width: 100%;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur 5px;
   overflow: hidden;
@@ -615,22 +872,14 @@ p {
   border-top: 1px solid rgba(240, 228, 228, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   padding: 20px;
-  grid-column-start: 1/span 3;
+  grid-column: 1/3;
+  justify-self: start;
 }
-
-.item1 {
-  grid-column-start: 2;
-  grid-row-start: 2;
-}
-
-.item2 {
-  grid-column-start: 3;
-  grid-row-start: 2;
-}
-
-.item3 {
-  grid-column-start: 4;
-  grid-row-start: 2;
+@media only screen and (max-width: 420px) {
+  .logocard {
+    max-width: 100%;
+    padding: 20px;
+  }
 }
 
 .card {
@@ -643,6 +892,11 @@ p {
   align-items: center;
   border-top: 1px solid rgba(240, 228, 228, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+@media only screen and (max-width: 420px) {
+  .card {
+    display: none;
+  }
 }
 
 .content {
@@ -680,6 +934,21 @@ p {
   transition: 0.5s;
   transform: translateY(100px);
   opacity: 0;
+}
+
+.item1 {
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+
+.item2 {
+  grid-column-start: 4;
+  grid-row-start: 2;
+}
+
+.item3 {
+  grid-column-start: 5;
+  grid-row-start: 2;
 }
 
 /*Second section*/
@@ -722,13 +991,31 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
-  align-items: center;
+  justify-content: space-between;
   padding-top: 50px;
   padding-right: 15px;
 }
+@media only screen and (max-width: 420px) {
+  .containersecond {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    padding: 20px;
+  }
+}
 .containersecond .textbox {
+  justify-content: space-between;
   padding-right: 15px;
+}
+.containersecond .readmore {
+  text-decoration: 2px underline #964776;
+  font-family: "Abel", sans-serif;
   font-weight: bold;
+  font-size: large;
+  padding-top: 5px;
+}
+.containersecond .readmore:hover {
+  text-decoration: 4px underline #6e2d54;
+  color: #000;
 }
 
 .button1 {
@@ -809,6 +1096,12 @@ p {
   justify-items: center;
   grid-gap: 1.5rem;
 }
+@media only screen and (max-width: 420px) {
+  .containerthird {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+}
 
 .cardtwo {
   grid-column: 1;
@@ -826,7 +1119,6 @@ p {
 .cardthree {
   grid-column: 2;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  /*border-radius: 10px;*/
   width: 200px;
   height: 250px;
   text-align: center;
@@ -872,12 +1164,23 @@ button {
   margin-bottom: 3rem;
   padding: 20px;
 }
+@media only screen and (max-width: 420px) {
+  .footer {
+    margin-bottom: 0;
+  }
+}
 .footer .footercontainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   padding: 20px;
   font-size: 1.5em;
+}
+@media only screen and (max-width: 420px) {
+  .footer .footercontainer {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
 }
 .footer .follow {
   text-align: center;
@@ -909,7 +1212,7 @@ button {
   border: 1px solid #000;
   padding: 5px;
   height: 65px;
-  width: 65%;
+  width: 70%;
 }
 .contactcontainer .icon:hover {
   transition: transform 0.3s ease-out;
@@ -919,6 +1222,18 @@ button {
 
 .contactcontainer:hover {
   background-color: #f5F1ea;
+}
+
+.readmore {
+  text-decoration: none;
+  color: #000;
+}
+
+.readmore:hover {
+  color: #964776;
+  transition: transform 0.4s ease-out;
+  transform: scale(1.1);
+  transform-origin: center;
 }
 
 /*# sourceMappingURL=style.css.map */

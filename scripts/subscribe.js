@@ -48,10 +48,10 @@
        });
 
        document.getElementById("email").value = 'Subscribed!';
-     }
-  
- 
+      }
+
      document.getElementById('submitBtn').addEventListener('click', InsertData);
 
      
+ 
   
