@@ -1,0 +1,88 @@
+// About page
+
+// Section one
+
+.about{
+    padding: 3rem;
+    
+    }
+    .alinks{
+      text-decoration: none;
+      color:#000;
+      font-weight: bold;
+      padding: 5px;
+      font-family: 'Abel', sans-serif;
+    }
+    
+    .alinks:hover{
+      text-decoration: underline;
+      color: rgb(156, 53, 101);
+    }
+    .containerabout{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 15px;
+      padding: 20px;
+      justify-items: center;
+      grid-gap: 1.5rem;
+    
+    }
+    .cardHI {
+      grid-column: 1;
+      box-shadow: 5px 12px 20px 0 rgba(0, 0, 0, 0.5);
+      transition: 0.2s;
+    
+    }
+    .textHI{
+      padding-left:20px;
+    }
+    
+    .cardHI:hover{
+      
+        box-shadow: 5px 12px 20px 0 rgba(0, 0, 0, 0.5);
+        transform: scale(1.2);
+    }
+
+ 
+
+    
+    //Section two
+    
+    .abouttwo{
+      padding: 3rem;
+      background:#a3ccac;
+      }
+
+    
+   .cardEdu {
+        grid-column: 2;
+        box-shadow: 5px 12px 20px 0 rgba(0, 0, 0, 0.5);
+        transition: 0.2s;
+      
+      }
+    .cardEdu:hover{
+      
+        box-shadow: 5px 12px 20px 0 rgba(0, 0, 0, 0.5);
+        transform: scale(1.2);
+    }
+
+    .textedu{
+      padding-right: 20px;
+      
+    }
+
+    //Section three
+    .aboutthree {
+        padding: 3rem;
+        background:#eddfde;
+    }
+
+    .carddesign{
+        grid-column: 1;
+        box-shadow: 5px 12px 20px 0 rgba(0, 0, 0, 0.5);
+        transition: 0.2s;
+    }
+    .carddesign:hover{
+        box-shadow: 5px 12px 20px 0 rgba(0, 0, 0, 0.5);
+        transform: scale(1.2);
+    }

@@ -1,0 +1,75 @@
+.projects{
+    padding: 3rem;
+    background:#fff;
+}
+
+.containerproject{
+
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: end;
+    grid-gap: 20px; 
+   
+}
+
+.projectcard{
+   
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 200px;
+    height: 310px;
+    text-align: center;
+    background-color: #fff;
+    margin: 10px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+
+.projectcard:hover {
+  box-shadow: 5px 12px 20px 0 rgba(0, 0, 0, 0.5);
+  transition: transform  0.4s ease-out;
+       transform: scale(1.1);
+       transform-origin: center;
+}
+
+.fadebyScale {
+  
+    animation:fadeAndScale 2s cubic-bezier(0.39, -1.05, 0.58, 1.95);
+    transform-origin:center bottom;
+  }
+
+.fadebyScale2 {
+  
+    animation:fadeAndScale 3s cubic-bezier(0.39, -1.05, 0.58, 1.95);
+    transform-origin:center bottom;
+  }
+  
+.fadebyScale3 {
+  
+    animation:fadeAndScale 4s cubic-bezier(0.39, -1.05, 0.58, 1.95);
+    transform-origin:center bottom;
+  }
+
+.fadebyScale4 {
+  
+    animation:fadeAndScale 5s cubic-bezier(0.39, -1.05, 0.58, 1.95);
+    transform-origin:center bottom;
+  }
+
+  .fadebyScale5 {
+  
+    animation:fadeAndScale 6s cubic-bezier(0.39, -1.05, 0.58, 1.95);
+    transform-origin:center bottom;
+  }
+
+.fadebyScale6 {
+  
+    animation:fadeAndScale 7s cubic-bezier(0.39, -1.05, 0.58, 1.95);
+    transform-origin:center bottom;
+  }
+
+
+  
+  

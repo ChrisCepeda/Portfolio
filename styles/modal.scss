@@ -1,4 +1,40 @@
-/* The Modal (background) */
+/* Modal Content */
+.modal-content {
+  position: relative;
+  margin: 40px auto;
+  padding: 30px;
+  border: 1px solid #a3ccac;
+  font-family: 'Poppins' , sans-serif;
+  max-width: 600px;
+  bottom:0;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /*border-radius: 10px;*/
+}
+
+@media screen and (max-width: 960px) {
+  .modal-content {
+    left: 0;
+    right: 0;
+    margin: 20px;
+  }
+}
+
+
+.email{
+  padding:10px;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  
+}
+.email:hover{
+  color: rgb(182, 30, 118);
+ 
+}
 
 .modal {
     display: none;
@@ -12,29 +48,8 @@
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
   }
-  /* Modal Content */
-  .modal-content {
-    position: relative; 
-    margin: 40px auto;
-    padding: 30px;
-
-    border: 1px solid #888;
-    max-width: 500px;
-    background: #fff;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    /*border-radius: 10px;*/
-  }
+ 
   
-  @media screen and (max-width: 960px) {
-    .modal-content {
-      left:0;
-      right:0;
-      margin: 20px;
-    }
-  }
   
   /* The Close Button */
   .close {
@@ -57,3 +72,18 @@
     color: rgba(88, 88, 99, 0.8);
     /* text-decoration: none; */
   }
+
+  
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  padding-top: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
