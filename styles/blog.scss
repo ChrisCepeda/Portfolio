@@ -8,6 +8,10 @@
     padding:20px;
     justify-items:center;
     grid-gap:1.5rem;
+
+    @media screen and (max-width:420px){
+      grid-template-columns:1fr; 
+    }
    
 }
 

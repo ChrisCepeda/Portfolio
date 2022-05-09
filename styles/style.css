@@ -17,7 +17,13 @@
   /*border-radius: 10px;*/
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
+  .modal-content {
+    left: 0;
+    right: 0;
+  }
+}
+@media screen and (max-width: 420px) {
   .modal-content {
     left: 0;
     right: 0;
@@ -35,33 +41,16 @@
   color: rgb(182, 30, 118);
 }
 
-.modal {
-  display: none;
-  position: relative;
-  z-index: 1001;
-  padding-top: 20px;
-  left: 0;
-  top: 100vh;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
 /* The Close Button */
 .close {
   color: #000;
   position: absolute;
-  /* float: right; */
   font-size: 28px;
   line-height: 14px;
   font-weight: bold;
-  /* width: 50px;
-  height: 100%; */
   top: 20px;
   right: 20px;
   cursor: pointer;
-  /* padding: 30px; */
   transition: color 0.2s ease-in-out;
 }
 
@@ -91,6 +80,11 @@
   padding: 20px;
   justify-items: center;
   grid-gap: 1.5rem;
+}
+@media screen and (max-width: 420px) {
+  .containerblog {
+    grid-template-columns: 1fr;
+  }
 }
 
 @keyframes fadeScale {
@@ -470,80 +464,37 @@ nav .navbar {
 }
 
 .about {
-  padding: 3rem;
+  padding: 3rem 0rem 0rem 3rem;
+  background-color: #fff;
+  background-image: url(../images/moi.jpg);
+  background-position: bottom right;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: 35%;
 }
-
-.alinks {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-  padding: 5px;
-  font-family: "Abel", sans-serif;
-}
-
-.alinks:hover {
-  text-decoration: underline;
-  color: rgb(156, 53, 101);
+@media screen and (max-width: 420px) {
+  .about {
+    background-image: none;
+    padding: 1rem;
+  }
 }
 
 .containerabout {
+  padding-top: 15px;
+  margin: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 15px;
-  padding: 20px;
+  grid-template-columns: 2fr 1fr;
   justify-items: center;
-  grid-gap: 1.5rem;
+  margin-bottom: 0%;
+  gap: 5px;
 }
-
-.cardHI {
-  grid-column: 1;
-  box-shadow: 5px 12px 20px 0 rgba(0, 0, 0, 0.5);
-  transition: 0.2s;
-}
-
-.textHI {
-  padding-left: 20px;
-}
-
-.cardHI:hover {
-  box-shadow: 5px 12px 20px 0 rgba(0, 0, 0, 0.5);
-  transform: scale(1.2);
-}
-
-.abouttwo {
-  padding: 3rem;
-  background: #a3ccac;
-}
-
-.cardEdu {
-  grid-column: 2;
-  box-shadow: 5px 12px 20px 0 rgba(0, 0, 0, 0.5);
-  transition: 0.2s;
-}
-
-.cardEdu:hover {
-  box-shadow: 5px 12px 20px 0 rgba(0, 0, 0, 0.5);
-  transform: scale(1.2);
-}
-
-.textedu {
-  padding-right: 20px;
-}
-
-.aboutthree {
-  padding: 3rem;
-  background: #eddfde;
-}
-
-.carddesign {
-  grid-column: 1;
-  box-shadow: 5px 12px 20px 0 rgba(0, 0, 0, 0.5);
-  transition: 0.2s;
-}
-
-.carddesign:hover {
-  box-shadow: 5px 12px 20px 0 rgba(0, 0, 0, 0.5);
-  transform: scale(1.2);
+@media screen and (max-width: 420px) {
+  .containerabout {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    padding: 5px;
+  }
 }
 
 .projects {
@@ -555,8 +506,13 @@ nav .navbar {
   padding: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-items: end;
   grid-gap: 20px;
+}
+@media screen and (max-width: 420px) {
+  .containerproject {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
 
 .projectcard {
@@ -614,15 +570,29 @@ nav .navbar {
   margin-bottom: 3rem;
   font-family: "Poppins", sans-serif;
 }
+@media screen and (max-width: 1024px) {
+  .post {
+    padding: 10px;
+    margin-bottom: 0;
+  }
+}
 
 .gridcontainer {
   display: grid;
   grid-template-columns: 2fr 7fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto;
   grid-gap: 1rem;
   justify-content: space-evenly;
   width: 100%;
   padding-top: 30px;
+}
+@media screen and (max-width: 420px) {
+  .gridcontainer {
+    grid-template-columns: 0;
+    grid-template-rows: 1fr 1fr;
+    padding: 5px;
+    justify-content: space-between;
+  }
 }
 
 .weathercard {
@@ -636,6 +606,13 @@ nav .navbar {
   align-content: center;
   padding: 10px;
   grid-column-start: 1;
+}
+@media screen and (max-width: 420px) {
+  .weathercard {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    justify-self: center;
+  }
 }
 
 .weathercardtime {
@@ -671,6 +648,13 @@ nav .navbar {
   grid-column-start: 2;
   grid-row-start: 1;
   grid-row-end: 4;
+}
+@media screen and (max-width: 420px) {
+  .slideshow-container {
+    grid-row-start: 2;
+    max-width: 100%;
+    justify-self: center;
+  }
 }
 
 /* Hide the images by default */
@@ -779,10 +763,15 @@ body {
   margin-top: 5vh;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 420px) {
   body {
     max-width: 100%;
-    margin-top: 0;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 920px) {
+  body {
+    margin: 0;
   }
 }
 
@@ -831,11 +820,11 @@ p {
 .first {
   background-color: #fff;
   background-image: url(../images/indeximagere.jpg);
-  background-position: right;
+  background-position: center;
   /* Center the image */
   background-repeat: no-repeat;
   /* Do not repeat the image */
-  background-size: 90%;
+  background-size: 100%;
   /*Resize the background image to cover the entire container */
 }
 @media only screen and (max-width: 768px) {
@@ -953,7 +942,7 @@ p {
 
 /*Second section*/
 .second {
-  background-color: #b5c9b9;
+  background-color: #e8ede9;
   text-align: center;
 }
 
@@ -1164,9 +1153,9 @@ button {
   margin-bottom: 3rem;
   padding: 20px;
 }
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 920px) {
   .footer {
-    margin-bottom: 0;
+    margin: 0;
   }
 }
 .footer .footercontainer {
@@ -1212,7 +1201,15 @@ button {
   border: 1px solid #000;
   padding: 5px;
   height: 65px;
-  width: 70%;
+  width: 100%;
+}
+.contactcontainer .icon {
+  max-width: 30%;
+}
+@media only screen and (max-width: 420px) {
+  .contactcontainer .icon {
+    max-width: 50%;
+  }
 }
 .contactcontainer .icon:hover {
   transition: transform 0.3s ease-out;
