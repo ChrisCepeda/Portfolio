@@ -8,8 +8,14 @@
     padding: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: end;
+    //justify-items: end;
     grid-gap: 20px; 
+
+    @media screen and (max-width:420px) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      
+    }
    
 }
 

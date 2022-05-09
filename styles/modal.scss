@@ -15,13 +15,23 @@
   /*border-radius: 10px;*/
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .modal-content {
     left: 0;
     right: 0;
-    margin: 20px;
   }
 }
+
+
+  @media screen and (max-width: 420px) {
+    .modal-content {
+      left: 0;
+      right: 0;
+      margin: 20px;
+     
+    }
+  }
+
 
 
 .email{
@@ -36,35 +46,16 @@
  
 }
 
-.modal {
-    display: none;
-    position: relative;
-    z-index: 1001;
-    padding-top: 20px;
-    left: 0;
-    top: 100vh;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
- 
-  
-  
   /* The Close Button */
   .close {
     color: #000;
     position: absolute;
-    /* float: right; */
     font-size: 28px;
     line-height: 14px;
     font-weight: bold;
-    /* width: 50px;
-    height: 100%; */
     top: 20px;
     right: 20px;
     cursor: pointer;
-    /* padding: 30px; */
     transition: color 0.2s ease-in-out;
   }
   
