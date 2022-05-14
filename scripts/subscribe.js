@@ -32,12 +32,8 @@
      const email = document.getElementById('email');
      const submitBtn = document.getElementById('submitBtn');
      
-     
-
      function InsertData(e){
        e.preventDefault();
-       
-       
 
        const db = getDatabase();
        const postListRef = ref(db, 'emails');
@@ -47,7 +43,7 @@
           
        });
 
-       document.getElementById("email").value = 'Subscribed!';
+       document.getElementById("email").value = '';
       }
 
      document.getElementById('submitBtn').addEventListener('click', InsertData);
