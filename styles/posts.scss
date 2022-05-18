@@ -6,12 +6,13 @@ background-color: #fff;
 padding:3rem;
 margin-bottom: 3rem;
 font-family: 'Poppins', sans-serif;
+max-width: 100%;
 
-
-@media screen and (max-width: 1024px) {
-  padding: 10px;
-  margin-bottom: 0;
+@media screen and (max-width: 800px) {
   
+  padding: 5px;
+  margin: 0;
+
 }
 }
 
@@ -242,13 +243,15 @@ ol{
 
     }
     @media screen and (max-width: 1000px) {
-      width: calc(50% - 20px);
+      
+      height: 100%;
       margin:20px;
     }
 
     @media screen and (max-width: 481px) {
       width: 100%;
-      margin: 0;
+      height: 100%;
+      margin: 15px;
     }
     a{
       text-decoration: none;
@@ -266,4 +269,14 @@ ol{
 }
 .card-wrapper__card:hover{
   box-shadow: 5px 12px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.postcontent{
+  padding: 20px; 
+  margin: 20px; 
+}
+
+.return{
+  padding-top: 20px; 
+  justify-items: center;
 }
